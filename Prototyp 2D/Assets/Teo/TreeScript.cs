@@ -8,6 +8,9 @@ public class TreeScript : MonoBehaviour
 {
     [SerializeField]
     private RectTransform health;
+
+    public Transform stubbespawner;
+    public GameObject stubbe;
     public GameObject TreeHealth;
     public GameObject Buttons;
     private float originalSize;
@@ -29,7 +32,10 @@ public class TreeScript : MonoBehaviour
             else
             {
                 TreeHealth.SetActive(false);
+                
                 health.sizeDelta = new Vector2(originalSize, health.sizeDelta.y);
+                Instantiate(stubbe, stubbespawner.position, transform.rotation);
+                gameObject.SetActive(false);
                 clickedyes = false;
             }
             
