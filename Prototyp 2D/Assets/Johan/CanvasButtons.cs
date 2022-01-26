@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class CanvasButtons : MonoBehaviour
@@ -9,7 +10,7 @@ public class CanvasButtons : MonoBehaviour
     private int farmingState; //0 = ej plogad, 1 = plogad, 2 = sådd, 3 = grown
     private Field currentField;
     public Button[] buttons;
-
+    public UnityAction Useenergi;
     private void Start()
     {
         
@@ -30,6 +31,7 @@ public class CanvasButtons : MonoBehaviour
 
     public void CanvasButtonPressed(int buttonIndex)
     {
+        Useenergi?.Invoke();
         currentField.ActionButtonPressed(buttonIndex);
     }
 }

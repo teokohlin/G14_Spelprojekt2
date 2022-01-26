@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class TreeScript : MonoBehaviour
@@ -15,6 +16,8 @@ public class TreeScript : MonoBehaviour
     public GameObject Buttons;
     private float originalSize;
     private bool clickedyes = false;
+
+    public UnityAction UseEnergi;
     void Start()
     {
         Time.timeScale = 1f;
@@ -61,6 +64,7 @@ public class TreeScript : MonoBehaviour
 
     public void Yes()
     {
+        UseEnergi?.Invoke();
         Buttons.SetActive(false);
         TreeHealth.SetActive(true);
         clickedyes = true;
