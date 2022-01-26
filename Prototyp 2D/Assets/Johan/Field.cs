@@ -36,17 +36,21 @@ public class Field : MonoBehaviour
 
         }
     }
-
     private void OnMouseDown()
     {
         if (playerInRange)
         {
             canvas.gameObject.SetActive(true);
             canvas.GetComponent<CanvasButtons>().UpdateButtons(farmState, this);
+            
             canvas.transform.position = new Vector3(
                 this.transform.position.x,
                 this.transform.position.y,
-                canvas.transform.position.z);
+                canvas.transform.position.z); //kamera grejen blev lustig
+                
+            
+            /* Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            canvas.transform.position = mousePos; */
         }
 
     }
