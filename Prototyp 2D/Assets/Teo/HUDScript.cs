@@ -32,10 +32,11 @@ public class HUDScript : MonoBehaviour
         {
             timer += Time.deltaTime;
             infotext.SetActive(true);
-            if (timer >= 2.2f)
-            {
-                infotext.SetActive(false);
-            }
+            
+        }
+        if (timer >= 2.2f)
+        {
+            infotext.SetActive(false);
         }
     }
 
