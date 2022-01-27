@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class PlayerScript : MonoBehaviour
     public CanvasButtons canvas;
     private Rigidbody2D rb;
     public float speed = 10f;
+    private bool isCurrentlyMoving;
+    public AudioSource audioSource; 
 
     public UnityAction RefillEnergy;
     void Start()
@@ -29,18 +32,35 @@ public class PlayerScript : MonoBehaviour
         {
             rock.UseEnergy += RemoveEnergi;
         }
+        
+        //audioSource.Play();
     }
 
     private void Update()
     {
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
-        Debug.Log(energi);
+        //Debug.Log(energi);
     }
 
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+
+        if (movement.sqrMagnitude > 0)
+        {
+
+            if (!audioSource.isPlaying)
+            {
+
+                audioSource.UnPause(); //tror play är bäst när man har kort audiofil
+            }
+            
+        }
+        else
+        {
+            audioSource.Pause();
+        }
     }
 
     public void AddEnergy()
