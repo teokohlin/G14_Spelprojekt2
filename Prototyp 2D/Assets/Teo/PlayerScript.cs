@@ -18,9 +18,9 @@ public class PlayerScript : MonoBehaviour
     {
         Bedscript bed = GameObject.FindObjectOfType<Bedscript>();
         bed.Slept += AddEnergy;
-         rb = this.GetComponent<Rigidbody2D>();
-         canvas.Useenergi += RemoveEnergi;
-         foreach (var t in träd)
+        rb = this.GetComponent<Rigidbody2D>();
+        canvas.Useenergi += RemoveEnergi;
+        foreach (var t in träd)
          {
              t.UseEnergi += RemoveEnergi;
          }
