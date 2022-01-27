@@ -9,6 +9,7 @@ public class PlayerScript : MonoBehaviour
     public int energi = 3;
     private Vector2 movement;
     public TreeScript[] träd;
+    public RockScript[] rocks;
     public CanvasButtons canvas;
     private Rigidbody2D rb;
     public float speed = 10f;
@@ -24,6 +25,10 @@ public class PlayerScript : MonoBehaviour
          {
              t.UseEnergi += RemoveEnergi;
          }
+        foreach (var rock in rocks)
+        {
+            rock.UseEnergy += RemoveEnergi;
+        }
     }
 
     private void Update()

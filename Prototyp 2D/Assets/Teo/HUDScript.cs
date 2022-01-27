@@ -9,6 +9,7 @@ public class HUDScript : MonoBehaviour
     private float originalSx;
     private float originalSy;
     public TreeScript[] träd;
+    public RockScript[] rocks;
     public CanvasButtons canvas;
     public PlayerScript player;
     private float timer;
@@ -22,6 +23,10 @@ public class HUDScript : MonoBehaviour
         foreach (var t in träd)
         {
             t.UseEnergi += RemoveEnergiIcon;
+        }
+        foreach (var rock in rocks)
+        {
+            rock.UseEnergy += RemoveEnergiIcon;
         }
     }
 
