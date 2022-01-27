@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HUDScript : MonoBehaviour
 {
+    public Text wood, stone, iron, food;
+    private int wR, sR, iR, fR;
     public RectTransform energiIcon;
     public GameObject infotext;
     private float originalSx;
@@ -20,13 +23,22 @@ public class HUDScript : MonoBehaviour
         originalSx = energiIcon.sizeDelta.x;
         originalSy = energiIcon.sizeDelta.y;
         canvas.Useenergi += RemoveEnergiIcon;
+        canvas.AddFood += FoodResource;
         foreach (var t in träd)
         {
             t.UseEnergi += RemoveEnergiIcon;
         }
+        foreach (var t in träd)
+        {
+            t.AddWood += WoodResource;
+        }
         foreach (var rock in rocks)
         {
             rock.UseEnergy += RemoveEnergiIcon;
+        }
+        foreach (var rock in rocks)
+        {
+            rock.AddStone += StoneResource;
         }
     }
 
@@ -42,11 +54,29 @@ public class HUDScript : MonoBehaviour
         
     }
 
-    public void AddenergiIcon()
+    public void WoodResource(int w)
+    {
+        wR += w;
+        wood.text = wR.ToString();
+    }
+
+    void StoneResource(int s)
+    {
+        sR += s;
+        stone.text = sR.ToString();
+    }
+    void FoodResource(int f)
+    {
+        fR += f;
+        food.text = fR.ToString();
+    }
+    
+    
+     public void AddenergiIcon()
     {
         energiIcon.sizeDelta = new Vector2(originalSx, originalSy);
     }
-    public void RemoveEnergiIcon()
+     public void RemoveEnergiIcon()
     {
         energiIcon.sizeDelta -= new Vector2(originalSx / 3, 0);
     }

@@ -17,6 +17,7 @@ public class RockScript : MonoBehaviour
     private bool energydepleted;
     
     public UnityAction UseEnergy;
+    public UnityAction<int> AddStone;
 
     void Start()
     {
@@ -69,6 +70,7 @@ public class RockScript : MonoBehaviour
         else
         {
             UseEnergy?.Invoke();
+            AddStone?.Invoke(50);
             buttons.SetActive(false);
             rockHealth.SetActive(true);
             clickedYes = true; 

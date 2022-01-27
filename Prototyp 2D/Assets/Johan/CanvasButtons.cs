@@ -11,6 +11,7 @@ public class CanvasButtons : MonoBehaviour
     private Field currentField;
     public Button[] buttons;
     public UnityAction Useenergi;
+    public UnityAction<int> AddFood;
     private PlayerScript player;
     private void Start()
     {
@@ -38,6 +39,10 @@ public class CanvasButtons : MonoBehaviour
         }
         else
         {
+            if (buttonIndex == 3)
+            {
+                AddFood?.Invoke(100);
+            }
             Useenergi?.Invoke();
             currentField.ActionButtonPressed(buttonIndex); 
         }

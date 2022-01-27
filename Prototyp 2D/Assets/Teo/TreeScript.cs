@@ -20,6 +20,7 @@ public class TreeScript : MonoBehaviour
     private bool energydepleted;
 
     public UnityAction UseEnergi;
+    public UnityAction<int> AddWood;
     void Start()
     {
         player = GameObject.FindObjectOfType<PlayerScript>();
@@ -84,6 +85,7 @@ public class TreeScript : MonoBehaviour
         else
         {
             UseEnergi?.Invoke();
+            AddWood?.Invoke(50);
             Buttons.SetActive(false);
             TreeHealth.SetActive(true);
             clickedyes = true; 
