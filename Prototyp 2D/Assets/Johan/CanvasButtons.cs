@@ -11,9 +11,10 @@ public class CanvasButtons : MonoBehaviour
     private Field currentField;
     public Button[] buttons;
     public UnityAction Useenergi;
+    private PlayerScript player;
     private void Start()
     {
-        
+         player = GameObject.FindObjectOfType<PlayerScript>();
     }
 
     public void UpdateButtons(int farmState, Field field)
@@ -31,7 +32,15 @@ public class CanvasButtons : MonoBehaviour
 
     public void CanvasButtonPressed(int buttonIndex)
     {
-        Useenergi?.Invoke();
-        currentField.ActionButtonPressed(buttonIndex);
+        if (player.energi <= 0)
+        {
+            Debug.Log("No energi left");
+        }
+        else
+        {
+            Useenergi?.Invoke();
+            currentField.ActionButtonPressed(buttonIndex); 
+        }
+        
     }
 }

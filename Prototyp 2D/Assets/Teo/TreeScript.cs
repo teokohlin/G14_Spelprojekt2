@@ -10,16 +10,20 @@ public class TreeScript : MonoBehaviour
     [SerializeField]
     private RectTransform health;
 
+    private PlayerScript player;
     public Transform stubbespawner;
     public GameObject stubbe;
     public GameObject TreeHealth;
     public GameObject Buttons;
     private float originalSize;
     private bool clickedyes = false;
+    private bool energydepleted;
 
     public UnityAction UseEnergi;
     void Start()
     {
+        player = GameObject.FindObjectOfType<PlayerScript>();
+        //player.NoEnergy += DisableYes;
         Time.timeScale = 1f;
         originalSize = health.sizeDelta.x;
     }
@@ -62,12 +66,28 @@ public class TreeScript : MonoBehaviour
         }
     }
 
+    //public void DisableYes(int energy)
+    //{
+    //    if (energy <= 0)
+    //    {
+    //        Buttons.SetActive(false);
+    //        Debug.Log("No energi left");
+    //    }
+    //    
+    //}
     public void Yes()
     {
-        UseEnergi?.Invoke();
-        Buttons.SetActive(false);
-        TreeHealth.SetActive(true);
-        clickedyes = true;
+        if (player.energi <= 0)
+        {
+            Debug.Log("No energi left");
+        }
+        else
+        {
+            UseEnergi?.Invoke();
+            Buttons.SetActive(false);
+            TreeHealth.SetActive(true);
+            clickedyes = true; 
+        }
     }
 
     public void No()

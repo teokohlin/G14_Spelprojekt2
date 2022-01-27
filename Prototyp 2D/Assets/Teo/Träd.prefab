@@ -908,6 +908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 4854853184397678509}
+  player: {fileID: 754700861689240487, guid: f7ef02b64a8c3eb41b6e4ef8ff29d87c, type: 3}
   stubbespawner: {fileID: 160290133312374993}
   stubbe: {fileID: 1251310709112020557, guid: 831663d11bd8ea143842db2a600e9f8d, type: 3}
   TreeHealth: {fileID: 4429145260355583753}
