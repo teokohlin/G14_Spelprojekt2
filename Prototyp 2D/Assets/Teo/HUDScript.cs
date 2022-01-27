@@ -30,14 +30,11 @@ public class HUDScript : MonoBehaviour
     {
         if (player.energi <= 0)
         {
-            timer += Time.deltaTime;
             infotext.SetActive(true);
-            
         }
-        if (timer >= 2.2f)
-        {
-            infotext.SetActive(false);
-        }
+        else if (player.energi > 0)
+            infotext.SetActive(false); 
+        
     }
 
     public void AddenergiIcon()
