@@ -8,7 +8,6 @@ public class Field : MonoBehaviour
     [SerializeField]
     private int farmState; //0 = ej plogad, 1 = plogad, 2 = sådd, 3 = grown
     public Canvas canvas;
-    private bool playerInRange = false;
 
     private SpriteRenderer spriteRenderer;
     
@@ -23,23 +22,6 @@ public class Field : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            playerInRange = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = false;
-            canvas.gameObject.SetActive(false);
-
-        }
-    }
-    private void OnMouseDown()
-    {
-        if (playerInRange)
-        {
             canvas.gameObject.SetActive(true);
             canvas.GetComponent<CanvasButtons>().UpdateButtons(farmState, this);
             
@@ -47,12 +29,16 @@ public class Field : MonoBehaviour
                 this.transform.position.x,
                 this.transform.position.y,
                 canvas.transform.position.z); //kamera grejen blev lustig
-                
-            
-            /* Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            canvas.transform.position = mousePos; */
         }
+    }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            canvas.gameObject.SetActive(false);
+
+        }
     }
 
     public void ActionButtonPressed(int buttonIndex)

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3854980108687500044}
   - component: {fileID: 3854980108687500043}
   - component: {fileID: 3854980108687500045}
-  - component: {fileID: 3854980108687500041}
+  - component: {fileID: 9120648013162042898}
   m_Layer: 0
-  m_Name: "Test f\xE4lt"
+  m_Name: "F\xE4lt 2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,8 +130,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.84, y: 0.75}
   m_EdgeRadius: 0
---- !u!58 &3854980108687500041
-CircleCollider2D:
+--- !u!61 &9120648013162042898
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -143,6 +143,16 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.07425988, y: 0.1131579}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.025, y: 1.14}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1.23
+  m_Size: {x: 2.4705594, y: 1.239013}
+  m_EdgeRadius: 0
