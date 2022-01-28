@@ -484,10 +484,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2193815868637870810, guid: 6797eb628e54cfb4e8f4541d9c783ae4, type: 3}
-      propertyPath: m_LocalScale.x
+      propertyPath: 
       value: 0.62521
       objectReference: {fileID: 0}
     - target: {fileID: 2193815868637870810, guid: 6797eb628e54cfb4e8f4541d9c783ae4, type: 3}
+      propertyPath: m_LocalScale.x
       value: 0.62521
       objectReference: {fileID: 0}
     - target: {fileID: 2193815868637870810, guid: 6797eb628e54cfb4e8f4541d9c783ae4, type: 3}
@@ -1234,7 +1235,7 @@ Transform:
   m_LocalScale: {x: 1.5405, y: 1.5405, z: 1.5405}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &606291037
 GameObject:
@@ -1385,7 +1386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &763804121
 AudioListener:
   m_ObjectHideFlags: 0

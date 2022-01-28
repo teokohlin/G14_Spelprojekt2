@@ -35,7 +35,7 @@ public class TreeScript : MonoBehaviour
         {
             if (health.sizeDelta.x > 0)
             {
-                health.sizeDelta += new Vector2(-0.01f/4, 0);
+                health.sizeDelta += new Vector2(Time.deltaTime * -1.5f, 0);
             }
             else
             {
