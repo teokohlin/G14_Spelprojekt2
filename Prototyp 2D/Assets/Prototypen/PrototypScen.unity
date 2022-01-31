@@ -1010,6 +1010,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8135698086692981240, guid: 175c436841324f54197963a51a20f658, type: 3}
+      propertyPath: m_Volume
+      value: 0.062
+      objectReference: {fileID: 0}
     - target: {fileID: 8638820901427695300, guid: 175c436841324f54197963a51a20f658, type: 3}
       propertyPath: m_Name
       value: Musikmanager
