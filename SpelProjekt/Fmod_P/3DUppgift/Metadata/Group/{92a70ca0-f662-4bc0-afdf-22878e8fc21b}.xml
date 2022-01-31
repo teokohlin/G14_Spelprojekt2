@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{92a70ca0-f662-4bc0-afdf-22878e8fc21b}">
+		<property name="color">
+			<value>Yellow</value>
+		</property>
+		<property name="name">
+			<value>Enemies</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{783899aa-bf0a-44fc-b34a-9e680c530049}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{744bec1e-f86e-4eb9-b19d-698da80559e8}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{0d701ae7-c4e0-424c-aa96-fccddccd5f44}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{783899aa-bf0a-44fc-b34a-9e680c530049}">
+		<relationship name="effects">
+			<destination>{80f286be-b943-4ff6-b3d1-ccdeee478c8e}</destination>
+			<destination>{2791ff98-0212-41a2-8b4b-99959477f24f}</destination>
+			<destination>{a0aac9f9-5d2c-490a-830b-49cd03fc0584}</destination>
+			<destination>{9e8bf314-1fbb-47ac-82fd-384a7175184e}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{744bec1e-f86e-4eb9-b19d-698da80559e8}" />
+	<object class="MixerSend" id="{80f286be-b943-4ff6-b3d1-ccdeee478c8e}">
+		<property name="inputFormat">
+			<value>0</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{034181ee-dfd5-436d-bd1e-918594ce683a}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusFader" id="{2791ff98-0212-41a2-8b4b-99959477f24f}" />
+	<object class="FlangerEffect" id="{a0aac9f9-5d2c-490a-830b-49cd03fc0584}">
+		<property name="mix">
+			<value>0</value>
+		</property>
+	</object>
+	<object class="DelayEffect" id="{9e8bf314-1fbb-47ac-82fd-384a7175184e}">
+		<property name="level">
+			<value>-80</value>
+		</property>
+	</object>
+</objects>

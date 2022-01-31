@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{746da3d3-0938-4d97-8605-fdac7e72a73c}">
+		<property name="name">
+			<value>Health</value>
+		</property>
+		<relationship name="folder">
+			<destination>{1245282f-64d2-49a5-a193-db803b82b2df}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{0c59923b-1b61-4d2b-bce3-fde7abc89ad4}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{0c59923b-1b61-4d2b-bce3-fde7abc89ad4}">
+		<property name="maximum">
+			<value>5</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>3.0499997138977051</value>
+		</property>
+	</object>
+</objects>

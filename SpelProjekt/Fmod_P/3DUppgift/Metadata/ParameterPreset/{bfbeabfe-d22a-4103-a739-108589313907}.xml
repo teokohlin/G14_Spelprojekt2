@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{bfbeabfe-d22a-4103-a739-108589313907}">
+		<property name="name">
+			<value>Distance_Cave</value>
+		</property>
+		<relationship name="folder">
+			<destination>{1245282f-64d2-49a5-a193-db803b82b2df}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{48b39859-7c07-4a70-abea-fa62f6c35ed7}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{48b39859-7c07-4a70-abea-fa62f6c35ed7}">
+		<property name="parameterType">
+			<value>3</value>
+		</property>
+		<property name="maximum">
+			<value>30</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

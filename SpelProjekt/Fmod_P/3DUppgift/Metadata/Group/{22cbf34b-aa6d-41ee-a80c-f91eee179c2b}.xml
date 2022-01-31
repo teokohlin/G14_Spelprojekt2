@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{22cbf34b-aa6d-41ee-a80c-f91eee179c2b}">
+		<property name="color">
+			<value>Yellow</value>
+		</property>
+		<property name="name">
+			<value>ENMY_Gunner_Intro</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{f43073fd-52a3-4f70-8e88-b338c74081c0}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{ff2a78f0-4cd3-4c9f-a214-824dda1871ff}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{81a10e9f-98ee-4aa4-af68-6f11a33aaced}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{f43073fd-52a3-4f70-8e88-b338c74081c0}">
+		<relationship name="effects">
+			<destination>{fd8942e9-9aef-47b3-931c-b6ece5195ff2}</destination>
+			<destination>{4bdf1003-7592-4238-b4bf-c222a76da72b}</destination>
+			<destination>{a6203e71-820d-4aa8-be1e-8d254104d822}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{ff2a78f0-4cd3-4c9f-a214-824dda1871ff}" />
+	<object class="MixerBusFader" id="{fd8942e9-9aef-47b3-931c-b6ece5195ff2}" />
+	<object class="CompressorEffect" id="{4bdf1003-7592-4238-b4bf-c222a76da72b}">
+		<property name="threshold">
+			<value>-6</value>
+		</property>
+		<property name="gain">
+			<value>2.5</value>
+		</property>
+	</object>
+	<object class="LimiterEffect" id="{a6203e71-820d-4aa8-be1e-8d254104d822}" />
+</objects>

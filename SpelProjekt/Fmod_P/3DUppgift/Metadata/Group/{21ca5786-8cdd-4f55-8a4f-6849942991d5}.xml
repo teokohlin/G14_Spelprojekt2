@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{21ca5786-8cdd-4f55-8a4f-6849942991d5}">
+		<property name="color">
+			<value>Yellow</value>
+		</property>
+		<property name="name">
+			<value>ENMY_Gunner_Weapon</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{6c104a1e-928a-4dcf-a0cd-368f6e9e6cfc}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{51550d66-2d64-4002-8dd5-9a79973fc8da}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{81a10e9f-98ee-4aa4-af68-6f11a33aaced}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{6c104a1e-928a-4dcf-a0cd-368f6e9e6cfc}">
+		<relationship name="effects">
+			<destination>{64676441-063f-47a4-9406-a6ee2a111162}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{51550d66-2d64-4002-8dd5-9a79973fc8da}" />
+	<object class="MixerBusFader" id="{64676441-063f-47a4-9406-a6ee2a111162}" />
+</objects>

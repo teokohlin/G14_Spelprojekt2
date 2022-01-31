@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{ee1f4ca9-2ae2-4075-9971-b65922d225a7}">
+		<property name="color">
+			<value>Yellow</value>
+		</property>
+		<property name="name">
+			<value>OBJ_WallDestory</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{7d382e66-28e1-456b-a9e6-36208aba17e4}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{521276b9-dfff-4aba-95c6-b85407c5c847}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{30a3b975-2f4a-47f6-b0c2-34029ec46851}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{7d382e66-28e1-456b-a9e6-36208aba17e4}">
+		<relationship name="effects">
+			<destination>{aef2daed-f55a-4c99-bc55-bdce4b4fce56}</destination>
+			<destination>{d2d9a284-5e28-46ef-a6ec-a7c5b37f3745}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{521276b9-dfff-4aba-95c6-b85407c5c847}" />
+	<object class="MixerBusFader" id="{aef2daed-f55a-4c99-bc55-bdce4b4fce56}" />
+	<object class="Sidechain" id="{d2d9a284-5e28-46ef-a6ec-a7c5b37f3745}" />
+</objects>
