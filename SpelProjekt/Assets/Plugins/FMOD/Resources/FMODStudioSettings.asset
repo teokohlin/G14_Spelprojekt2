@@ -344,8 +344,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Fmod_P/3DUppgift/3DFmod.fspro
-  sourceBankPath: Fmod_P/3DUppgift/Build
+  sourceProjectPath: ../../../Users/moavo/OneDrive/Skrivbord/3DUppgift/3DFmod.fspro
+  sourceBankPath: ../../../Users/moavo/OneDrive/Skrivbord/3DUppgift/Build
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -366,8 +366,7 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks:
-  - Master Bank
+  MasterBanks: []
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264

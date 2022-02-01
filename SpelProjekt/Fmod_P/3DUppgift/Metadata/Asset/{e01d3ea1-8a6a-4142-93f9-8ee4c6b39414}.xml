@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.00.00">
-	<object class="EncodableAsset" id="{e01d3ea1-8a6a-4142-93f9-8ee4c6b39414}">
-		<property name="assetPath">
-			<value>Interactables/</value>
-		</property>
-	</object>
-</objects>
